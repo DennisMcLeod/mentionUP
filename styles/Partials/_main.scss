@@ -1,0 +1,191 @@
+// INDEXPAGE STYLES
+.section {
+	min-height: 100vh;
+}
+.image-section {
+	display: flex;
+	justify-content: center;
+	padding-bottom: 35px;
+}
+.text-section {
+	padding: 25px 0;
+}
+
+
+.demoImage {
+	height: 600px;
+	width: auto;
+}
+
+h2 {
+	color: $primary;
+	font-weight: normal;
+	font-size: 4.0rem;
+	text-align: center;
+	margin: 40px 0;
+	width: 100%;
+	text-transform: uppercase;
+	letter-spacing: 9px;
+}
+
+h3 {
+	font-weight: bold;
+	font-size: 3.0rem;
+}
+
+
+// Landing page
+.home-page {
+	background-color: $primary;
+	h1 {
+		font-size: 4.6rem;
+		color: white;
+		padding-top: 120px;
+		font-weight: normal;
+		margin-left: 18px;
+		span {
+			font-weight: bold;
+			display: block;
+		}
+	}
+	.app-store {
+		width: 160px;
+		margin: 10px 5px;
+		img {
+			width: 100%;
+		}
+	}
+	.download-links {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin: 40px 0;
+	}
+}
+
+
+
+//How It Works
+.works {
+	ol {
+		margin-bottom: 40px;
+		padding: 40px;
+	}
+	li {
+		margin-top: 10px;
+	}
+
+}
+
+.influencer {
+	background-color: $secondary;
+	h3 {
+		color: $primary;
+	}
+	ol {
+		border-left-width: 3px;
+		border-left-style: solid;
+		border-left-color: $accent;
+	}
+}
+
+.business {
+	background-color: $primary;
+	h3 {
+		color: $secondary;
+	}
+	ol {
+		color: $secondary;
+		border-right-width: 3px;
+		border-right-style: solid;
+		border-right-color: white;
+	}
+}
+
+//Features Section Styles
+.features {
+	background-color: $accent;
+	color: $secondary;
+	padding: 30px;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	.wrapper {
+		display: grid;
+		grid-template-rows: repeat(6, 1fr);
+		grid-gap: 20px;
+		height: 100%;
+	}
+	.item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding: 10px;
+		border-radius: 5px;
+		h4 {
+			width: 200px;
+		}
+		img {
+			height: 66px;
+			width: 63px;
+		}
+	}
+	i {
+		color: $primary;
+		font-size: 5.0rem;
+	}
+}
+
+
+
+@media (min-width: $bp-sm) {
+	.home-page .download-links {
+		flex-direction: row;
+		justify-content: center;
+	}
+	.wrapper {
+		max-width: 650px;
+		margin: 0 auto;
+	}
+	.features .wrapper {
+		grid-template-rows: repeat(3, 1fr);
+		grid-template-columns: 1fr 1fr;
+	}
+
+}
+
+@media (min-width: $bp-md) {
+	.section, .wrapper {
+		display: flex;
+		justify-content: space-around;
+	}
+	.reverse {
+		flex-direction: row-reverse;
+	}
+
+	.section-right, .section-left {
+		width: 50%;
+		padding: 30px;
+	}
+	.home-page {
+
+		.download-links {
+			justify-content: flex-start;
+		}
+		.app-store {
+			height: 43px;
+		}
+		.section-left, .section-right {
+			margin-top: 70px;
+		}
+	}
+	.wrapper {
+		max-width: none;
+		margin: 0;
+	}
+	.features .wrapper {
+		grid-template-rows: 1fr 1fr;
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+}

@@ -1,0 +1,116 @@
+header {
+	position: fixed;
+	width: 100%;
+	background-color: $primary;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 15px 40px;
+	height: 10vh;
+	.logo {
+		height: 100%;
+		flex-shrink: 0;
+		width: 150px;
+	}
+	img {
+		max-height: 100%;
+	}
+	nav {
+		width: 100%;
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		right: -100%;
+		background-color: $primary;
+		transition: right 350ms ease-in-out;
+		a {
+			border-radius: 10px;		
+			}
+		}
+	li {
+		width: 100%;
+		padding: 20px;
+		border-top: 1px solid $accent;
+		border-bottom: 1px solid $accent;
+		&:nth-of-type(2) {
+			text-transform: uppercase;
+		}
+		&:hover {
+			background-color: $accent;
+		} 
+	}
+	ul {
+		display: flex;
+		flex-direction: column;
+		color: $secondary;
+		align-items: center;
+		height: 100%;
+		margin-top: 60px;
+		
+	}
+}
+.closemenu {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	color: $secondary;
+	cursor: pointer;
+}
+	
+.hamburger {
+	// position: absolute;
+	// top: 50%;
+	// right: 20px;
+	// transform: translateY(-50%);
+	cursor: pointer;
+	color: $secondary;
+	font-size: 2.0rem;
+}
+
+.open {
+	right: 0;
+}
+
+.nodisplay {
+	display: none;
+}
+
+@media (min-width: 600px) {
+	header nav {
+		width: 40%;
+	}
+}
+
+@media (min-width: 900px) {
+	header {
+		nav {
+			position: static;
+			width: auto;
+			a {
+				padding: 10px 15px;
+				transition: background-color 150ms;
+				&:hover {
+				color: white;
+				}
+			}
+		}
+		ul {
+			flex-direction: row;
+			margin: 0;
+		}
+		li {
+			padding: 0;
+			width: auto;
+			border: none;
+			&:hover {
+				background-color: inherit;
+			}
+		}
+
+	}
+	.closemenu,
+	.hamburger {
+		display: none;
+	}	
+
+}
