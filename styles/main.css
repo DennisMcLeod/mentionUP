@@ -243,25 +243,23 @@ button:active {
   padding-top: 100px;
   text-align: center;
   color: #E5E3ED;
-  font-size: 3.0rem;
-  line-height: 1; }
+  font-size: 3.0rem; }
   .top-heading h1 {
     padding: 20px 40px;
     text-transform: uppercase; }
 
-.infoPage {
-  line-height: 26px; }
-  .infoPage .wrapper {
-    padding: 0 20px 0 40px;
-    margin: 30px auto;
-    max-width: 1000px;
-    width: 80%;
-    border-left: 3px solid #775ce5; }
-  .infoPage ul {
-    list-style-type: circle;
-    margin-left: 40px; }
-    .infoPage ul ul {
-      list-style-type: square; }
+.infoPage .wrapper {
+  line-height: 26px;
+  padding: 0 20px 0 40px;
+  margin: 30px auto;
+  max-width: 1000px;
+  width: 90%;
+  border-left: 3px solid #775ce5; }
+.infoPage ul {
+  list-style-type: circle;
+  margin-left: 40px; }
+  .infoPage ul ul {
+    list-style-type: square; }
 
 @media (min-width: 600px) {
   .top-heading {
@@ -297,8 +295,6 @@ header {
     padding: 20px;
     border-top: 1px solid #AFA2FF;
     border-bottom: 1px solid #AFA2FF; }
-    header li:nth-of-type(2) {
-      text-transform: uppercase; }
     header li:hover {
       background-color: #AFA2FF; }
   header ul {
@@ -521,6 +517,9 @@ h3 {
 
 .privacy .top-heading {
   background-image: linear-gradient(to right, rgba(119, 92, 229, 0.5), rgba(119, 92, 229, 0.5)), url("../images/mbr-privacy.jpg"); }
+
+.refund .top-heading {
+  background-image: linear-gradient(to right, rgba(119, 92, 229, 0.5), rgba(119, 92, 229, 0.5)), url("../images/mbr-refund.jpg"); }
 
 footer {
   display: flex;

@@ -74,7 +74,6 @@ button:active {
 	text-align: center;
 	color: $secondary;
 	font-size: 3.0rem;
-	line-height: 1;
 	h1 {
 		padding: 20px 40px;
 		text-transform: uppercase;
@@ -82,13 +81,14 @@ button:active {
 }
 
 .infoPage {
-	line-height: 26px;
+	
 	
 	.wrapper {
+		line-height: 26px;
 		padding: 0 20px 0 40px;
 		margin: 30px auto;
 		max-width: 1000px;
-		width: 80%;
+		width: 90%;
 		border-left: 3px solid #775ce5;
 	}
 	ul {
