@@ -1,22 +1,24 @@
 // INDEXPAGE STYLES
-.section {
-	min-height: 100vh;
-}
-.image-section {
-	display: flex;
-	justify-content: center;
-	padding-bottom: 35px;
-}
-.text-section {
-	padding: 25px 0;
-}
+
+.about {
+	.section {
+		min-height: 100vh;
+	}
+	.image-section {
+		display: flex;
+		justify-content: center;
+		padding-bottom: 35px;
+	}
+	.text-section {
+		padding: 25px 0;
+	}
 
 
-.demoImage {
-	height: 600px;
-	width: auto;
+	.demoImage {
+		height: 600px;
+		width: auto;
+	}
 }
-
 h2 {
 	color: $primary;
 	font-weight: normal;
@@ -140,52 +142,56 @@ h3 {
 
 
 @media (min-width: $bp-sm) {
-	.home-page .download-links {
-		flex-direction: row;
-		justify-content: center;
-	}
-	.wrapper {
-		max-width: 650px;
-		margin: 0 auto;
-	}
-	.features .wrapper {
-		grid-template-rows: repeat(3, 1fr);
-		grid-template-columns: 1fr 1fr;
+	.about {
+		.home-page .download-links {
+			flex-direction: row;
+			justify-content: center;
+		}
+		.wrapper {
+			max-width: 650px;
+			margin: 0 auto;
+		}
+		.features .wrapper {
+			grid-template-rows: repeat(3, 1fr);
+			grid-template-columns: 1fr 1fr;
+		}
 	}
 
 }
 
 @media (min-width: $bp-md) {
-	.section, .wrapper {
-		display: flex;
-		justify-content: space-around;
-	}
-	.reverse {
-		flex-direction: row-reverse;
-	}
+	.about {
+		.section, .flexContainer {
+			display: flex;
+			justify-content: space-around;
+		}
+		.reverse {
+			flex-direction: row-reverse;
+		}
 
-	.section-right, .section-left {
-		width: 50%;
-		padding: 30px;
-	}
-	.home-page {
+		.section-right, .section-left {
+			width: 50%;
+			padding: 30px;
+		}
+		.home-page {
 
-		.download-links {
-			justify-content: flex-start;
+			.download-links {
+				justify-content: flex-start;
+			}
+			.app-store {
+				height: 43px;
+			}
+			.section-left, .section-right {
+				margin-top: 70px;
+			}
 		}
-		.app-store {
-			height: 43px;
+		.wrapper {
+			max-width: none;
+			margin: 0;
 		}
-		.section-left, .section-right {
-			margin-top: 70px;
+		.features .wrapper {
+			grid-template-rows: 1fr 1fr;
+			grid-template-columns: 1fr 1fr 1fr;
 		}
-	}
-	.wrapper {
-		max-width: none;
-		margin: 0;
-	}
-	.features .wrapper {
-		grid-template-rows: 1fr 1fr;
-		grid-template-columns: 1fr 1fr 1fr;
 	}
 }
